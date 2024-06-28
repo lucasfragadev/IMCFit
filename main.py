@@ -2,7 +2,6 @@
 # PT-BR: Calculadora que determina o índice de massa corporal com base na altura e peso, auxiliando na avaliação do estado de saúde e forma física.
 # EN-US: Calculator that determines body mass index based on height and weight, helping to assess health and fitness.
 
-# Constantes para classificação do IMC // Constants for BMI classification
 UNDERWEIGHT_SEVERE = 16
 UNDERWEIGHT_MODERATE = 17
 UNDERWEIGHT_MILD = 18.5
@@ -11,28 +10,24 @@ OVERWEIGHT = 29.9
 OBESE_I = 34.9
 OBESE_II = 39.9
 
-# Mensagem de boas vindas e citação // Welcome message and quote
 welcome_message_pt = "\nPT-BR: Bem vindo(a) à calculadora de IMC - Índice de Massa Corpórea"
 welcome_message_en = "EN-US: Welcome to the BMI - Body Mass Index calculator\n"
 quote_pt = '"Você é o que você come." (Alan Levinovitz)'
 quote_en = '"You are what you eat." (Alan Levinovitz)\n'
 
-# Mostra mensagens de boas vindas // Show welcome messages
 print(welcome_message_pt)
 print(welcome_message_en)
 print()
 print(quote_pt)
 print(quote_en)
 
-# Solicita peso e altura do usuário // Requests user's weight and height
 weight = float(input("Qual o seu peso? (kg) / What is your weight (kg)? "))
 height_cm = int(input("Qual é sua altura em centímetros (cm)? / What is your height in centimeters (cm)? "))
 height_meter = height_cm / 100.00
 
-# Calcula o IMC // Calculates BMI
+
 bmi = weight / height_meter ** 2
 
-# Classifica o IMC e exibe o resultado // Classifies BMI and displays the result
 if bmi < UNDERWEIGHT_SEVERE:
     print(f"\nSeu IMC é {bmi:.1f}. Isso é classificado como: Gravemente abaixo do peso.")
     print(f"Your BMI is {bmi:.1f}. This is classified as: Severe Thinness.\n")
